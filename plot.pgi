@@ -1,0 +1,17 @@
+#!/bin/gnuplot -persistent
+
+set title 'pow(x + 3, 0.5)'
+
+set xlabel 'ln(h)'
+set ylabel 'ln(Y)'
+
+set format x "10^{%L}"
+set format y "10^{%L}"
+
+set logscale xy
+
+plot '1data.txt' linecolor rgb 'red' with lines title 'h_1' ,\
+     '2data.txt' linecolor rgb 'blue' with lines title 'h_2',\
+     '3data.txt' linecolor rgb 'green' with lines title 'h_3',\
+     '4data.txt' linecolor rgb 'orange' with lines title 'h_4',\
+     '5data.txt' linecolor rgb 'pink' with lines title 'h_5',\
